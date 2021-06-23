@@ -29,6 +29,9 @@ func TestParse(t *testing.T) {
 			{"/sig/ssh-user-cert", []string{"key3"}, 36000},
 			{"/sig/blob", []string{"key1"}, 36000},
 		},
+		HealthCheck: HealthCheck{
+			KeyID: "ssh-user-key",
+		},
 		ShutdownOnInternalFailure: true,
 		ShutdownOnInternalFailureCriteria: struct {
 			ReportMode            bool
